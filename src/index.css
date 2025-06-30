@@ -7,4 +7,6 @@
   --font-sanchez: "Sanchez", "sans-serif"; 
 }
 
-
+body{
+  overflow: hidden
+}

@@ -12,6 +12,7 @@ function App() {
             </div>
             <div>
               <img className="hidden md:flex" src={ImgPrincipal} alt="Food-image" />
+                 <ElipseBackground className="absolute translate-x-[15vw] -translate-y-[40vw]"/>
             </div>
         </main>
     </>
