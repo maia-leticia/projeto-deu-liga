@@ -15,9 +15,11 @@ function handleChange(e){
 }
 
 function sendFood(){
-  if(listFood.length <=4){
+  if(listFood.length <=4 ){
     if(!listFood.includes(food)){
-      setListFood([...listFood, food])
+      if(food != ""){
+        setListFood([...listFood, food])
+      } 
     } else alert("Alimento ja cadastrado!")
   } else alert("Limite maximo de 5 itens!")
   
@@ -26,6 +28,13 @@ function sendFood(){
 
 function removeItem(nome){
   setListFood(listFood.filter(item => item !== nome))
+}
+
+function handleSend(){
+  if(listFood.length !==0){
+    alert("enviou")
+  } else alert("Cadastre algum alimento!")
+  
 }
 
   return (
@@ -53,7 +62,7 @@ function removeItem(nome){
                 )
                 }   
                 
-                <div className="w-[150px] rounded-full bg-[#E53170] text-[#FFFFFF] p-3 text-[20px] text-center cursor-pointer font-bold">Enviar</div>
+                <div className="w-[150px] rounded-full bg-[#E53170] text-[#FFFFFF] p-3 text-[20px] text-center cursor-pointer font-bold" onClick={handleSend}>Enviar</div>
               </div>
               <div>
                 <img className="left-[40%] top-[5%] hidden lg:flex relative max-w-[700px]" src={ImgPrincipal} alt="Food-image" />
