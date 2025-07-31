@@ -1,11 +1,32 @@
 import Header from "./components/Header"
-import Search from "./components/Search"
 import Ingrediente from "./components/Ingrediente"
 import ImgPrincipal from "../src/assets/img-principal.png"
-import IngredientList from "./components/IngredientList"
-
+import IconSearch from '../src/assets/icon-search.png'
+import Send from '../src/assets/sent.png'
+import { useState } from "react"
 
 function App() {
+
+const [listFood, setListFood] = useState([])
+const[food, setFood] = useState("")
+
+function handleChange(e){
+  setFood(e.target.value)
+}
+
+function sendFood(){
+  if(listFood.length <=4){
+    if(!listFood.includes(food)){
+      setListFood([...listFood, food])
+    } else alert("Alimento ja cadastrado!")
+  } else alert("Limite maximo de 5 itens!")
+  
+  setFood("")
+}
+
+function removeItem(nome){
+  setListFood(listFood.filter(item => item !== nome))
+}
 
   return (
     <>
@@ -15,10 +36,23 @@ function App() {
               <div className=" lg:pl-[75px] ">
                 <div className="flex flex-col items-center"> 
                   <h1 className="text-[50px] lg:text-[70px] text-[white] font-sanchez mb-3" >INGREDIENTES</h1>
-                  <Search/>
-                  {/* 7 Ingredientes no máximo */}
-                </div>
-                <IngredientList/>
+                   <div className="flex justify-center items-center gap-5 mb-4">
+                     <div className=" flex items-center gap-3 bg-[#FFFFFF] max-w-[600px] p-2 px-3 rounded-full">
+                        <img src={IconSearch} alt="" />
+                        <input className="text-[24px] font-inter font-bold w-[80vw] outline-none " type="text" name="" id="" placeholder="Search..." value={food} onChange={handleChange} onKeyDown={(e)=>{if (e.key === "Enter"){sendFood()} }}/>
+                        </div>
+                        <img src={Send} alt="" className="w-[40px] h-[40px] hover:cursor-pointer" onClick={sendFood}/>
+                      </div>
+                   </div> 
+                {listFood.length == 0 &&
+                  <p className="text-[#FFFFFF] mb-5 text-[20px]">Nenhum alimento cadastrado ainda :(</p>
+                }
+                { listFood.map((item, index)=>(
+                  <Ingrediente key={index} nome={item} onRemove={removeItem}/>
+                )
+                )
+                }   
+                
                 <div className="w-[150px] rounded-full bg-[#E53170] text-[#FFFFFF] p-3 text-[20px] text-center cursor-pointer font-bold">Enviar</div>
               </div>
               <div>
