@@ -15,7 +15,7 @@ As tecnologias e ferramentas que estão sendo utilizadas no desenvolvimento:
 - **React.js** → Construção da interface e componentes.
 - **JavaScript (ES6+)** → Lógica da aplicação.
 - **Vite** → Ferramenta de build rápida e moderna.
-- **Tailwind CSS** (opcional, caso adicione depois) → Estilização responsiva e ágil.
+- **Tailwind CSS** → Estilização responsiva e ágil.
 - **APIs de receitas/integração futura** → Para sugestões mais completas (planejado).
 
 ---
