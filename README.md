@@ -1,12 +1,51 @@
-# React + Vite
+# 🍲 DeuLiga - Recomendador de Refeições
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Introdução
+O **DeuLiga** é um site em desenvolvimento que recomenda refeições com base nos ingredientes que o usuário possui em casa.  
+A ideia surgiu para resolver um problema comum: *“O que cozinhar com o que tenho na geladeira?”*.  
 
-Currently, two official plugins are available:
+O usuário insere os ingredientes disponíveis em um campo de input e o sistema sugere possíveis refeições que podem ser preparadas.  
+O projeto busca oferecer **praticidade, economia de tempo e redução de desperdício alimentar**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias
+As tecnologias e ferramentas que estão sendo utilizadas no desenvolvimento:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React.js** → Construção da interface e componentes.
+- **JavaScript (ES6+)** → Lógica da aplicação.
+- **Vite** → Ferramenta de build rápida e moderna.
+- **Tailwind CSS** (opcional, caso adicione depois) → Estilização responsiva e ágil.
+- **APIs de receitas/integração futura** → Para sugestões mais completas (planejado).
+
+---
+
+## ⚙️ Instalação
+Para rodar o projeto localmente:
+
+```bash
+# Clone o repositório
+git clone https://github.com/maia-leticia/projeto-deu-liga.git
+
+# Entre na pasta do projeto
+cd projeto-deu-liga
+
+# Instale as dependências
+npm install
+# ou
+yarn install
+
+# Rode o projeto
+npm run dev
+```
+
+---
+
+## 🎥 Representação:
+
+<img width="1334" height="812" alt="image" src="https://github.com/user-attachments/assets/2f3f2f0c-4639-4853-8458-f2f022e9d662" />
+
+
+> ✨ Projeto em desenvolvimento: novas features e ajustes estão sendo adicionados progressivamente.
+
+
